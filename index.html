@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Savory Kitchen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <a href="#home" class="logo">🍽️ Savory<span>Kitchen</span></a>
+    <nav id="nav-links">
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#reserve">Reserve</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="cart-btn" id="cart-btn" aria-label="Open cart">🛒 <span id="cart-count">0</span></button>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <p class="tag">Fresh • Local • Delicious</p>
+      <h1>Taste the <span>Joy</span> of Homemade Food</h1>
+      <p>Handcrafted dishes made with love, fresh ingredients and a pinch of magic. Order online or book a table today.</p>
+      <div class="hero-buttons">
+        <a href="#menu" class="btn">Order Now</a>
+        <a href="#reserve" class="btn btn-outline">Book a Table</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="plate">🍝</div>
+      <div class="float f1">🍅</div>
+      <div class="float f2">🌿</div>
+      <div class="float f3">🧀</div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="feature"><span>🚚</span><h3>Fast Delivery</h3><p>Hot food at your door in 30 minutes.</p></div>
+    <div class="feature"><span>🥬</span><h3>Fresh Ingredients</h3><p>Sourced daily from local farms.</p></div>
+    <div class="feature"><span>👨‍🍳</span><h3>Expert Chefs</h3><p>Over 20 years of culinary experience.</p></div>
+  </section>
+
+  <!-- Menu -->
+  <section class="menu" id="menu">
+    <h2 class="section-title">Our <span>Menu</span></h2>
+    <div class="filters">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="breakfast">Breakfast</button>
+      <button class="filter" data-filter="lunch">Lunch</button>
+      <button class="filter" data-filter="dinner">Dinner</button>
+      <button class="filter" data-filter="dessert">Desserts</button>
+    </div>
+    <div class="menu-grid" id="menu-grid"></div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="about-image">👩‍🍳</div>
+    <div class="about-text">
+      <h2 class="section-title left">About <span>Us</span></h2>
+      <p>Savory Kitchen started as a small family kitchen in 2010. Today we serve thousands of happy customers, but our recipe stays the same: honest food, cooked fresh, served with a smile.</p>
+      <div class="stats">
+        <div><strong>15+</strong><span>Years</span></div>
+        <div><strong>50+</strong><span>Dishes</span></div>
+        <div><strong>10k+</strong><span>Customers</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="reviews" id="reviews">
+    <h2 class="section-title">What People <span>Say</span></h2>
+    <div class="review-grid">
+      <div class="review"><p>"The best pasta I've had outside Italy. The sauce is incredible!"</p><h4>— Maria L.</h4><div class="stars">★★★★★</div></div>
+      <div class="review"><p>"Fast delivery and the burger was still hot. Will order again."</p><h4>— James K.</h4><div class="stars">★★★★★</div></div>
+      <div class="review"><p>"Lovely atmosphere and the chocolate lava cake is a must-try."</p><h4>— Aisha N.</h4><div class="stars">★★★★☆</div></div>
+    </div>
+  </section>
+
+  <!-- Reservation -->
+  <section class="reserve" id="reserve">
+    <h2 class="section-title">Book a <span>Table</span></h2>
+    <form id="reserve-form">
+      <input type="text" id="r-name" placeholder="Your name" required>
+      <input type="email" id="r-email" placeholder="Email address" required>
+      <input type="date" id="r-date" required>
+      <input type="time" id="r-time" required>
+      <select id="r-guests" required>
+        <option value="">Number of guests</option>
+        <option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option>
+      </select>
+      <button type="submit" class="btn">Reserve Now</button>
+    </form>
+    <p id="reserve-msg" class="reserve-msg"></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <a href="#home" class="logo">🍽️ Savory<span>Kitchen</span></a>
+        <p>Good food, good mood.</p>
+      </div>
+      <div>
+        <h4>Opening Hours</h4>
+        <p>Mon – Fri: 8am – 10pm</p>
+        <p>Sat – Sun: 9am – 11pm</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>📍 123 Food Street</p>
+        <p>📞 +1 234 567 890</p>
+        <p>✉️ hello@savorykitchen.com</p>
+      </div>
+    </div>
+    <p class="copy">© <span id="year"></span> Savory Kitchen. All rights reserved.</p>
+  </footer>
+
+  <!-- Cart sidebar -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart" id="cart">
+    <div class="cart-header">
+      <h3>Your Order</h3>
+      <button id="cart-close" aria-label="Close cart">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-footer">
+      <p>Total: <strong id="cart-total">$0.00</strong></p>
+      <button class="btn full" id="checkout">Checkout</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="java.js"></script>
+</body>
+</html>
